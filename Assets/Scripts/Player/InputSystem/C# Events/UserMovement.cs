@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.TextCore.Text;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Animator))]
 public class UserMovement : MonoBehaviour
 {
     [SerializeField]
@@ -34,11 +35,14 @@ public class UserMovement : MonoBehaviour
     private Vector2 inputVector;
 
     //Components
+    [SerializeField]
+    private Animator animator;
     private PlayerControls playerControls;
     private InputAction movement;
     private Rigidbody rb;
     private CapsuleCollider cp;
     private Transform mainCameraTransform;
+    
 
     //Movement variables
     private Vector3 move;
@@ -127,7 +131,7 @@ public class UserMovement : MonoBehaviour
 
         if (inputVector == Vector2.zero && IsGrounded())
         {
-            velocity.y = velocity.y;
+            velocity.y = rb.velocity.y;
             rb.velocity = velocity;
         }
     }
