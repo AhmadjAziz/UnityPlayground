@@ -118,8 +118,8 @@
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
--r:"D:/GameDeveloper/DemoPlayground/Library/PackageCache/com.unity.cinemachine@2.8.4/Runtime/ThirdParty/clipper_library.dll"
--r:"D:/GameDeveloper/DemoPlayground/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
+-r:"D:/GameDeveloper/UnityPlayground/DemoPlayground/Library/PackageCache/com.unity.cinemachine@2.8.4/Runtime/ThirdParty/clipper_library.dll"
+-r:"D:/GameDeveloper/UnityPlayground/DemoPlayground/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
 -r:"D:/Unity Hub/2021.3.2f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"D:/Unity Hub/2021.3.2f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
 -r:"D:/Unity Hub/2021.3.2f1/Editor/Data/Managed/UnityEngine/UnityEditor.DiagnosticsModule.dll"
@@ -340,9 +340,9 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/CameraControl.cs"
-"Assets/Scripts/Player/InputSystem/MovementUsingC#Events/UserMovement.cs"
-"Assets/Scripts/Player/InputSystem/MovementUsingUnityEvents/PlayerMovement.cs"
+"Assets/Scripts/Player/InputSystem/C# Events/UserMovement.cs"
 "Assets/Scripts/Player/InputSystem/PlayerControls.cs"
+"Assets/Scripts/Player/InputSystem/Unity Event/PlayerMovement.cs"
 -langversion:9.0
 
 /deterministic
