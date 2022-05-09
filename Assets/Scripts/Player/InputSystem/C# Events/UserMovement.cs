@@ -40,7 +40,7 @@ public class UserMovement : MonoBehaviour
     private PlayerControls playerControls;
     private InputAction movement;
     private Rigidbody rb;
-    private CapsuleCollider cp;
+    private CapsuleCollider capsuleCollider;
     private Transform mainCameraTransform;
     
 
@@ -55,9 +55,10 @@ public class UserMovement : MonoBehaviour
     {
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody>();
-        cp = GetComponent<CapsuleCollider>();
+        capsuleCollider = GetComponent<CapsuleCollider>();
         mainCameraTransform = Camera.main.transform;
         velocity = new Vector3(0f, 0f, 0f);
+        
     }
 
     private void OnEnable()
@@ -129,11 +130,11 @@ public class UserMovement : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * rotationSpeed);
         }
 
-        if (inputVector == Vector2.zero && IsGrounded())
-        {
-            velocity.y = rb.velocity.y;
-            rb.velocity = velocity;
-        }
+        //if (inputVector == Vector2.zero && IsGrounded())
+        //{
+        //    velocity.y = rb.velocity.y;
+        //    rb.velocity = velocity;
+        //}
     }
 
     /**
@@ -141,6 +142,9 @@ public class UserMovement : MonoBehaviour
      */
     private bool IsGrounded()
     {
-        return Physics.CapsuleCast(cp.bounds.center, cp.bounds.size, 0, Vector3.down, distanceToGround);
+        
+        return Physics.CapsuleCast(capsuleCollider.bounds.center, capsuleCollider.bounds.size, 0, Vector2.down, distanceToGround);
     }
+
+    
 }
