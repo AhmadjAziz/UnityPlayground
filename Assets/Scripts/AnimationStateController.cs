@@ -6,7 +6,6 @@ public class AnimationStateController : MonoBehaviour
 {
     private Animator animator;
      int velocityHash;
-    [SerializeField]
     private float velocity;
     [SerializeField]
     private float acceleration;

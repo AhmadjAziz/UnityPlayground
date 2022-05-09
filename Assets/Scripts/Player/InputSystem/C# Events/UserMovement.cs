@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 using UnityEngine.TextCore.Text;
 
 [RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(Animator))]
 public class UserMovement : MonoBehaviour
 {
     [SerializeField]
@@ -35,8 +34,6 @@ public class UserMovement : MonoBehaviour
     private Vector2 inputVector;
 
     //Components
-    [SerializeField]
-    private Animator animator;
     private PlayerControls playerControls;
     private InputAction movement;
     private Rigidbody rb;
